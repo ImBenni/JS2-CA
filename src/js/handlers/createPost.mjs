@@ -7,6 +7,12 @@ export function setCreatePostFormListener() {
         form.addEventListener("submit", (event) => {
             event.preventDefault()
         
+            document.querySelectorAll('input').forEach( input => {
+                if(input.value === ""){
+                    input.setAttribute("disabled", true);
+                }
+            });
+
             const form = event.target;
             const formData = new FormData(form);
             const post = Object.fromEntries(formData.entries())
