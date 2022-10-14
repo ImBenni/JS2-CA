@@ -1,5 +1,8 @@
 import { load } from "../storage/index.mjs"
 
+/**
+ * Creates header information.
+ */
 export function headers() {
     const token = load("token");
 
@@ -9,6 +12,9 @@ export function headers() {
     }
 }
 
+/**
+ * Creates authorized information.
+ */
 export async function authFetch(url, options =  {}) {
 return fetch(url, {
     ...options,

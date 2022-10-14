@@ -1,4 +1,11 @@
+@import "_variables.scss";
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar-brand, h1, h2{
+    color: $primary;
+}
+
 
 .form-control:disabled{
     cursor: not-allowed;

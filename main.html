@@ -4,46 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NorLog</title>
+    <title>Grace</title>
     <link rel="stylesheet" href="./dist/css/style.css" />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
 </head>
-<body class="bg-light">
-    <header class="container-fluid border-bottom border-2 border-primary">
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="main.html">NorLog</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/profile">View Profile</a></li>
-                      <li><a class="dropdown-item" href="/profile/edit">Edit Profile</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Log Out</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/profile/login/">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/profile/register/">Register</a>
-                  </li>
+<body class="bg-light d-flex flex-column min-vh-100">
+  <header class="container-fluid border-bottom border-2 border-primary">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/main.html">Grace</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/profile/">View Profile</a></li>
+                  <li><a class="dropdown-item" href="/profile/edit/">Edit Profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><button class="dropdown-item" id="logout">Log Out</button></li>
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-primary" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-    </header>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/post/create/">Create a Post</a></li>
+                  <li><a class="dropdown-item" href="/posts/">View Posts</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/profile/login/">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/profile/register/">Register</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+  </header>
     <main class="container">
         <div class="px-4 py-5 my-5 text-center">
-            <h1 class="display-5 fw-bold">Welcome to NorLog</h1>
+            <h1 class="display-5 fw-bold">Welcome to Grace</h1>
             <div class="col-lg-6 mx-auto">
               <p class="lead mb-4">Login or create an account!</p>
               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -53,7 +62,8 @@
             </div>
           </div>
     </main>
-    <footer></footer>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="text-center text-lg-start text-muted mt-auto pt-5">
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">© 2022 Benni</div>
+    </footer>
 </body>
 </html>

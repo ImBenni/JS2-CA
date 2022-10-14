@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../dist/css/style.css" />
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
+  </head>
+  <body class="bg-light d-flex flex-column min-vh-100">
+    <header class="container-fluid border-bottom border-2 border-primary">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/main.html">Grace</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/profile/">View Profile</a></li>
+                      <li><a class="dropdown-item" href="/profile/edit/">Edit Profile</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><button class="dropdown-item" id="logout">Log Out</button></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/post/create/">Create a Post</a></li>
+                      <li><a class="dropdown-item" href="/posts/">View Posts</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/profile/login/">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/profile/register/">Register</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+      </header>
+
+    <main class="container col-sm-10 col-lg-5 p-4">
+        <div class="container d-flex justify-content-between card-body border border-1 rounded-5 border-primary p-4">
+            <div class="row">
+                <div class="col-auto d-flex pe-3 text-start"> 
+                    <img src="" class="rounded-5 shadow-sm" width="150" height="150">
+                    <div class="ms-3 mb-5">
+                        <h4>Jane Doe</h4>
+                        <p class="text-secondary mb-3">The one and only!</p>
+                        <button class="btn btn-primary shadow-sm">Edit</button> 
+                    </div>
+                </div>
+                
+                <div class="col-auto ps-3">
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, est tota omnis bonorum ex. Ad sit aeque aeterno eligendi, quo id utinam vituperata. Nam duis aperiri ne, has labore qualisque cu. Te per principes expetendis consectetuer. Nec tation efficiendi ut. Per doctus electram id, nam ut tota veniam accumsan, habeo menandri postulant his at.</p>
+                </div>
+            </div>            
+        </div>
+
+        <div class="my-3">
+            <h2>Friends</h2>
+                <div class="row ms-1">
+                    <div class="col-auto me-2 mb-2  px-3 pt-1 border border-1 border-secondary text-center">
+                        <strong><a class="link-secondary text-decoration-none" href="">Fred</a></strong>
+                    </div> 
+                    <div class="col-auto me-2 mb-2 px-3 pt-1 border border-1 border-secondary text-center">
+                        <strong><a class="link-secondary text-decoration-none" href="">Elizabeth</a></strong>
+                    </div> 
+                    <div class="col-auto me-2 mb-2 px-3 pt-1 border border-1 border-secondary text-center">
+                        <strong><a class="link-secondary text-decoration-none" href="">Jonas</a></strong>
+                    </div> 
+                    <div class="col-auto me-2 mb-2 px-3 p-1 border border-1 border-secondary text-center">
+                        <strong><a class="link-secondary text-decoration-none" href="">Tyrone</a></strong>
+                    </div> 
+                    <div class="col-auto me-2 mb-2 px-3 pt-1 border border-1 border-secondary text-center">
+                        <strong><a class="link-secondary text-decoration-none" href="">Chowder</a></strong>
+                    </div> 
+                </div>        
+            </div>
+        </div>
+
+        <div class="my-3">
+            <h2>Recent Posts</h2>
+        <div class="container card-group col-10 col-sm-12 justify-content-center">
+            <div class="card me-2 border border-1 rounded-5 border-primary ">
+              <img class="card-img-top pt-2 px-2 rounded-5" src="" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Title</h5>
+                <p class="card-text">A short description that sounds detailed, but is in fact, not.</p>
+                <p class="card-text"><strong><a class="text-decoration-none" href="">Mona Lisa</a></strong></p>         
+              </div>
+            </div>
+            <div class="card mx-2 border border-1 rounded-5 border-primary">
+              <img class="card-img-top pt-2 px-2 rounded-5" src="" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Title</h5>
+                <p class="card-text">A short description that sounds detailed, but is in fact, not.</p>
+                <p class="card-text"><strong><a class="text-decoration-none" href="">Da Vinci</a></strong></p>    
+              </div>
+            </div>
+            <div class="card ms-2 border border-1  rounded-5 border-primary">
+              <img class="card-img-top pt-2 px-2 rounded-5" src="" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Title</h5>
+                <p class="card-text">A short description that sounds detailed, but is in fact, not.</p>
+                <p class="card-text"><strong><a class="text-decoration-none" href="">Mozart</a></strong></p>    
+              </div>
+            </div>
+          </div>
+        </div>       
+                 
+    </main>
+
+    <footer class="text-center text-lg-start text-muted mt-auto pt-5">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">© 2022 Benni</div>
+    </footer>
+  </body>
+</html>

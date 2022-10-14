@@ -1,6 +1,6 @@
-// export function postTemplatesA(postData) {
-//     return `<div class="post">${postData.title}<div>`
-// }
+/**
+ * This will insert values from postData.
+ */
 
 export function postTemplates(postData) {
   const post = document.createElement("div");

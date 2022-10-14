@@ -7,8 +7,13 @@
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "social",
+    "media",
+    "bootstrap",
+    "sass"
+  ],
+  "author": "Benjamin Arevalo",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.55.0"

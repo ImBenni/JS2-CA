@@ -2,5 +2,5 @@ export * from "./createPost.mjs"
 export * from "./editPost.mjs"
 export * from "./login.mjs"
 export * from "./register.mjs"
-
+export * from "../api/auth/logout.mjs"
 export * from "./editProfile.mjs"

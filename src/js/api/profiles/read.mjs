@@ -11,6 +11,9 @@ export async function getProfiles(id) {
     return await response.json();
 }
 
+/**
+ * A Function that will get the profile of the logged in user.
+ */
 export async function getProfile(name) {
     if (!name) {
         throw new Error("Get requires a Name");

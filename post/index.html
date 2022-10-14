@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post | NorLog</title>
+    <title>Create Post | NorLog</title>
     <link rel="stylesheet" href="../../dist/css/style.css" />
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="/src/js/index.mjs" defer type="module"></script>
 </head>
-<body class="bg-light">
+<body class="bg-light d-flex flex-column min-vh-100">
   <header class="container-fluid border-bottom border-2 border-primary">
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../../main.html">NorLog</a>
+          <a class="navbar-brand" href="/main.html">Grace</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -22,10 +22,17 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/profile">View Profile</a></li>
-                  <li><a class="dropdown-item" href="/profile/edit">Edit Profile</a></li>
+                  <li><a class="dropdown-item" href="/profile/">View Profile</a></li>
+                  <li><a class="dropdown-item" href="/profile/edit/">Edit Profile</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Log Out</a></li>
+                  <li><button class="dropdown-item" id="logout">Log Out</button></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/post/create/">Create a Post</a></li>
+                  <li><a class="dropdown-item" href="/posts/">View Posts</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -42,52 +49,21 @@
           </div>
         </div>
       </nav>
-</header>
+  </header>
     <main class="flex-grow-1 p-4">
-        <div class="container-fluid" id="post">
+        <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8">
-                    
-                    <!-- post page -->
+                <div class="col-12 col-md-8 col-xl-5 border border-2 rounded-5 border-primary mt-3 p-5">
 
-                    <form id="registerForm">
-                      <div class="form-group mb-3">
-                          <label for="">Name</label>
-                          <input class="form-control" type="text" name="name" required pattern="^[\w]+$" title="Username cannot contain special numbers or symbols.">
-                      </div>
-          
-                      <div class="form-group mb-3">
-                          <label for="">Email</label>
-                          <input class="form-control" type="email" name="email" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @noroff.no and @stud.noroff domains are allowed">
-                      </div>
-          
-                      <div class="form-group mb-3">
-                          <label for="">Password</label>
-                          <input class="form-control" type="password" name="password" required minlength="8">
-                      </div>
-          
-                      <div class="form-group mb-3">
-                          <label for="">Banner</label>
-                          <input class="form-control" type="url" name="banner" disabled>
-                      </div>
-
-                      <div class="form-group mb-3">
-                          <label for="">Avatar</label>
-                          <input class="form-control" type="url" name="avatar" disabled>
-                      </div>
-
-                      <button class="btn btn-primary">Register</button>
-                  </form>
+                  <div class="post-container"></div>
 
                 </div>
             </div>
         </div>
-        
-
-        
-
     </main>
-    <footer></footer>
+  <footer class="text-center text-lg-start text-muted mt-auto pt-5">
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">© 2022 Benni</div>
+  </footer>
     
 </body>
 </html>

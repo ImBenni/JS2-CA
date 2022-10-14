@@ -1,7 +1,13 @@
 import { createPost } from "../api/posts/index.mjs";
 
+/**
+ * A listener for when creating new posts
+ */
 export function setCreatePostFormListener() {
     const form = document.getElementById("createPost");
+    const pageTitle = document.getElementById("title");
+    const pageBody = document.getElementById("body");
+    const pageMedia = document.getElementById("media");
 
     if (form) {
         form.addEventListener("submit", (event) => {
@@ -13,13 +19,16 @@ export function setCreatePostFormListener() {
                 }
             });
 
-            const form = event.target;
-            const formData = new FormData(form);
-            const post = Object.fromEntries(formData.entries())
+            const title = pageTitle.value;
+            const body = pageBody.value;
+            const media = pageMedia.value;
 
-    
-            // Send to the API
-            createPost(post)
+            createPost({
+                title: title,
+                body: body,
+                media: media,
+                })
+            form.reset();
         })
     }
 }
